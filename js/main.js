@@ -64,7 +64,7 @@ scene.add(plane);
 
 // default models
 
-let defaultMaterial = new THREE.MeshBasicMaterial(0x555555);
+let defaultMaterial = new THREE.MeshStandardMaterial(0x555555);
 const boxGeometry = new THREE.BoxGeometry(5,5,5);
 const sphereGeometry = new THREE.SphereGeometry(5,32,32);
 export const box = new THREE.Mesh(boxGeometry, defaultMaterial);
@@ -94,10 +94,10 @@ const plHelper = new THREE.PointLightHelper(pl, 0.5);
 scene.add(pl, plHelper)
 
 const al = new THREE.AmbientLight(0xffffcc, 0.5);
-// scene.add(al);
+scene.add(al);
 
 const hl = new THREE.HemisphereLight(0xffffff, 0x003300, 0.5);
-// scene.add(hl);
+scene.add(hl);
 
 // Variáveis de controle para iluminação
 let spotLightsOn = true;

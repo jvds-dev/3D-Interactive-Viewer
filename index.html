@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>3D Interactive Viewer</title>
     <link rel="stylesheet" href="css/style.css">
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧊</text></svg>">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
     
@@ -12,42 +17,46 @@
 
     <div class="models-panel">
         <button id="box-object">Cube</button>
-        <button id="sphere-object">Cube</button>
+        <button id="sphere-object">Sphere</button>
         <button id="custom-object">Custom</button>
     </div>
 
     <div class="control-panel">
-        <div class="sl-container-pos">
-            <div class="label">
-                <p>Position</p>
-                <button id="sl-toggle-pos">▾</button>
+        <div class="container">
+            <h3>SPOTLIGHT 🔦</h3>
+            <div class="sl-container-pos">
+                <div class="label">
+                    <p>Position</p>
+                    <button id="sl-toggle-pos">▾</button>
+                </div>
+                <div class="slider-group" id="sl-group-pos">
+                    <input type="range" min="-50" max="50" value="0" class="slider" id="sl-posX">
+                    <input type="range" min="-50" max="50" value="20" class="slider" id="sl-posY">
+                    <input type="range" min="-50" max="50" value="20" class="slider" id="sl-posZ">
+                </div>
             </div>
-            <div class="slider-group" id="sl-group-pos">
-                <input type="range" min="-50" max="50" value="0" class="slider" id="sl-posX">
-                <input type="range" min="-50" max="50" value="20" class="slider" id="sl-posY">
-                <input type="range" min="-50" max="50" value="20" class="slider" id="sl-posZ">
+            <div class="sl-container-in">
+                <div class="label">
+                    <p>Intensity</p>
+                    <button id="sl-toggle-in">▾</button>
+                </div>
+                <div class="slider-group" id="sl-group-in">
+                    <input type="range" min="1" max="10" value="1" class="slider" id="sl-in">
+                </div>
+            </div>
+            <div class="sl-container-ang">
+                <div class="label">
+                    <p>Angle</p>
+                    <button id="sl-toggle-ang">▾</button>
+                </div>
+                <div class="slider-group" id="sl-group-ang">
+                    <input type="range" min="1" max="50" value="1" class="slider" id="sl-ang">
+                </div>
             </div>
         </div>
-        <div class="sl-container-in">
-            <div class="label">
-                <p>Intensity</p>
-                <button id="sl-toggle-in">▾</button>
-            </div>
-            <div class="slider-group" id="sl-group-in">
-                <input type="range" min="1" max="10" value="1" class="slider" id="sl-in">
-            </div>
-        </div>
-        <div class="sl-container-ang">
-            <div class="label">
-                <p>Angle</p>
-                <button id="sl-toggle-ang">▾</button>
-            </div>
-            <div class="slider-group" id="sl-group-ang">
-                <input type="range" min="1" max="50" value="1" class="slider" id="sl-ang">
-            </div>
-        </div>
-        <button id="ambientlight-btn">Ambient</button>
-        <button>-</button>
+        
+        <!-- <button id="ambientlight-btn">Ambient</button>
+        <button>-</button> -->
     </div>
 
     <div class="material-panel">
