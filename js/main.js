@@ -9,6 +9,8 @@ const renderer = new THREE.WebGLRenderer({
     canvas: document.querySelector('#bg'),
 });
 
+renderer.setClearColor(0x070707); // Define a cor de fundo para branco
+
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.shadowMap.enabled = true;
@@ -64,11 +66,11 @@ scene.add(plane);
 
 // default models
 
-let defaultMaterial = new THREE.MeshStandardMaterial(0x555555);
+let objectMaterial = new THREE.MeshStandardMaterial(0x555555);
 const boxGeometry = new THREE.BoxGeometry(5,5,5);
 const sphereGeometry = new THREE.SphereGeometry(5,32,32);
-export const box = new THREE.Mesh(boxGeometry, defaultMaterial);
-export const sphere = new THREE.Mesh(sphereGeometry, defaultMaterial);
+export const box = new THREE.Mesh(boxGeometry, objectMaterial);
+export const sphere = new THREE.Mesh(sphereGeometry, objectMaterial);
 sphere.castShadow = true;
 
 
@@ -137,10 +139,10 @@ const depthMaterial = new THREE.MeshDepthMaterial({});
 const basicLineMaterial = new THREE.LineBasicMaterial({ color: 0xffffff });
 const dashedLineMaterial = new THREE.LineDashedMaterial({ color: 0x00ff00, dashSize: 3, gapSize: 1 });
 
+let defaultMaterial = null;
 export function changeMaterial(object, material) {
     if (object) {
         // Armazena o material padrão do objeto caso ainda não tenha sido armazenado
-        let defaultMaterial = null;
         object.traverse(function (child) {
             if (child.isMesh) {
                 if (!defaultMaterial) {
