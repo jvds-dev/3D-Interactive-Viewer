@@ -1,0 +1,115 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    overflow: hidden;
+}
+
+.models-panel{
+    position: absolute;
+    background: #151515;
+    height: 40px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    top: 0;
+    left: 0 ;
+}
+
+.models-panel button{
+    background: #353535;
+    border: none;
+    color: #fff;
+    padding: 4px 8px;
+    cursor: pointer;
+}
+
+
+
+.material-panel{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background: #151515;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.material-panel button{
+    border: none;
+    padding: 5px;
+    border-radius: 4px;
+    color: bisque;
+    background: #353535;
+    cursor: pointer;
+}
+.material-panel button:hover{
+    background: #555555;
+}
+
+.control-panel{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background: #151515;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.control-panel button{
+    border: none;
+    padding: 5px;
+    border-radius: 4px;
+    color: bisque;
+    background: #353535;
+    cursor: pointer;
+}
+.control-panel button:hover{
+    background: #555555;
+}
+
+.sl-container{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: aliceblue;
+    /* transition: all .3s ease; */
+    /* height: auto; */
+}
+.label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    color: aliceblue;
+    /* background: red; */
+}
+.slider-group {
+    /* background: red; */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s ease; /* Use a transição na propriedade 'max-height' */
+}
+.slider-group.expanded{
+    max-height: 15vh; /* Ajuste a altura máxima para 90% da altura da janela de visualização */
+}
+
+.slider{
+    user-select: none;
+}

@@ -1,0 +1,11 @@
+Model Information:
+* title:	The Witcher 3 - Eredin's Helmet
+* source:	https://sketchfab.com/3d-models/the-witcher-3-eredins-helmet-5b194113e97a4e87a138d4c16bdc1556
+* author:	mefq (https://sketchfab.com/blurryface542)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "The Witcher 3 - Eredin's Helmet" (https://sketchfab.com/3d-models/the-witcher-3-eredins-helmet-5b194113e97a4e87a138d4c16bdc1556) by mefq (https://sketchfab.com/blurryface542) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

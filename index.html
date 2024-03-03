@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <canvas id="bg"></canvas>
+
+    <div class="models-panel">
+        <button id="box-object">Cube</button>
+        <button id="sphere-object">Cube</button>
+        <button id="custom-object">Custom</button>
+    </div>
+
+    <div class="control-panel">
+        <div class="sl-container-pos">
+            <div class="label">
+                <p>Position</p>
+                <button id="sl-toggle-pos">▾</button>
+            </div>
+            <div class="slider-group" id="sl-group-pos">
+                <input type="range" min="-50" max="50" value="0" class="slider" id="sl-posX">
+                <input type="range" min="-50" max="50" value="20" class="slider" id="sl-posY">
+                <input type="range" min="-50" max="50" value="20" class="slider" id="sl-posZ">
+            </div>
+        </div>
+        <div class="sl-container-in">
+            <div class="label">
+                <p>Intensity</p>
+                <button id="sl-toggle-in">▾</button>
+            </div>
+            <div class="slider-group" id="sl-group-in">
+                <input type="range" min="1" max="10" value="1" class="slider" id="sl-in">
+            </div>
+        </div>
+        <div class="sl-container-ang">
+            <div class="label">
+                <p>Angle</p>
+                <button id="sl-toggle-ang">▾</button>
+            </div>
+            <div class="slider-group" id="sl-group-ang">
+                <input type="range" min="1" max="50" value="1" class="slider" id="sl-ang">
+            </div>
+        </div>
+        <button id="ambientlight-btn">Ambient</button>
+        <button>-</button>
+    </div>
+
+    <div class="material-panel">
+        <button id="basic-btn">Basic</button>
+        <button id="lambert-btn">Lambert</button>
+        <button id="phong-btn">Phong</button>
+        <button id="standard-btn">Standard</button>
+        <button id="toon-btn">Toon</button>
+        <button id="depth-btn">Depth</button>
+        <button id="basicline-btn">BasicLine</button>
+        <button id="dashedline-btn">DashedLine</button>
+        <button id="default-btn">Default</button>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/events.js"></script>
+
+</body>
+</html>
